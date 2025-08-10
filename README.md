@@ -35,5 +35,3 @@ Use as issues para reportar bugs ou sugerir funcionalidades. Veja os templates d
 Confira o cronograma detalhado [aqui](./CRONOGRAM.md)
 
 ---
-
-**Boa sorte e divirta-se desenvolvendo!**
