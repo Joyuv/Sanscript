@@ -33,5 +33,3 @@ Use as issues para reportar bugs ou sugerir funcionalidades. Veja os templates d
 ## Cronograma
 
 Confira o cronograma detalhado [aqui](./CRONOGRAM.md)
-
----
