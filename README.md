@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RPG Texto Mundo Aberto
 
-## Getting Started
+Projeto de um jogo RPG de texto em mundo aberto, desenvolvido com Next.js, React e Tailwind CSS.
 
-First, run the development server:
+## Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Criar um jogo imersivo com geração procedural, sistema de combate baseado em texto, inventário e quests.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js (React)
+- Tailwind CSS
+- JavaScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como rodar
 
-## Learn More
+1. Clone o repositório  
+   `git clone https://github.com/seuusuario/seuprojeto.git`
 
-To learn more about Next.js, take a look at the following resources:
+2. Instale dependências  
+   `npm install`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Rode o servidor de desenvolvimento  
+   `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Acesse no navegador  
+   `http://localhost:3000`
 
-## Deploy on Vercel
+## Contribuindo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Use as issues para reportar bugs ou sugerir funcionalidades. Veja os templates disponíveis.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Cronograma
+
+Confira o cronograma detalhado [aqui](./CRONOGRAMA.md) *(ou onde você colocar o arquivo)*
+
+---
+
+**Boa sorte e divirta-se desenvolvendo!**
