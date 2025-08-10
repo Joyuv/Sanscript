@@ -32,7 +32,7 @@ Use as issues para reportar bugs ou sugerir funcionalidades. Veja os templates d
 
 ## Cronograma
 
-Confira o cronograma detalhado [aqui](./CRONOGRAMA.md) *(ou onde você colocar o arquivo)*
+Confira o cronograma detalhado [aqui](./CRONOGRAM.md)
 
 ---
 
