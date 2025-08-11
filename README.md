@@ -15,7 +15,7 @@ Criar um jogo imersivo com geração procedural, sistema de combate baseado em t
 ## Como rodar
 
 1. Clone o repositório  
-   `git clone https://github.com/seuusuario/seuprojeto.git`
+   `git clone https://github.com/Joyuv/Sanscript.git`
 
 2. Instale dependências  
    `npm install`
