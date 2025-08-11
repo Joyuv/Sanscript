@@ -1,0 +1,12 @@
+.button {
+  color: #0a0a0a;
+  box-shadow: -5px 5px rgba(255, 255, 255, 0.3);
+}
+
+.button:hover {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+  border: 2px solid white;
+}
