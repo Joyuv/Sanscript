@@ -8,12 +8,14 @@ const amarante = Amarante({
   weight: "400",
 });
 
-export default function Button({ children }) {
+export default function Button({ children, href }) {
   return (
-    <div
-      className={`${amarante.className} active button bg-gray-500 rounded-md p-2 inline-block text-4xl cursor-pointer select-none`}
-    >
-      <h1>{children}</h1>
-    </div>
+    <a href={href}>
+      <div
+        className={`${amarante.className} active button bg-gray-500 rounded-md p-2 inline-block text-4xl cursor-pointer select-none`}
+      >
+        <h1>{children}</h1>
+      </div>
+    </a>
   );
 }
