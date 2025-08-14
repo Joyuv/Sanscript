@@ -1,0 +1,6 @@
+.mapa {
+  font-family: "monospace";
+  white-space: pre;
+  font-size: 14px; /* aumenta ou diminui o mapa */
+  line-height: 1;
+}
