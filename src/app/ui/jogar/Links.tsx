@@ -7,10 +7,7 @@ const amarante = Amarante({
   weight: "400",
 });
 
-const links = [
-  { href: "/jogar/mochila", name: "Mochila" },
-  { href: "/jogar/mapa", name: "Mapa" },
-];
+const links = [{ href: "/jogar/mochila", name: "Mochila" }];
 
 export default function Links() {
   return (

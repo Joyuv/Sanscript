@@ -4,6 +4,13 @@ import Button from "@/app/ui/Button";
 export default function Home() {
   return (
     <main className="flex flex-col display-center items-center gap-3">
+      <Image
+        src="/next.svg"
+        alt="next"
+        width="200"
+        height="100"
+        className="bg-gray-500 p-2 rounded"
+      ></Image>
       <Button href="jogar">Começar</Button>
       <Button href="configuracao">Configurações</Button>
       <Button href="carregar">Carregar</Button>
