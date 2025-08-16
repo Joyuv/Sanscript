@@ -10,7 +10,7 @@ Criar um jogo imersivo com geração procedural, sistema de combate baseado em t
 
 - Next.js (React)
 - Tailwind CSS
-- JavaScript
+- Typescript
 
 ## Como rodar
 
