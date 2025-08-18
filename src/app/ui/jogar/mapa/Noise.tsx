@@ -1,5 +1,4 @@
-import Noise from "noisejs";
-import { useMemo, useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "@/app/ui/jogar/mapa/mapa.css";
 
 // Sistema de ruído
@@ -20,23 +19,34 @@ export default function Mapa({
   seed: number;
   escala: number;
 }) {
-  const linhas = useMemo(() => {
-    const ruido = new Noise(seed);
-    const resultado = [];
-    for (let y = 0; y < tamy; y++) {
-      let linha = "";
-      for (let x = 0; x < tamx; x++) {
-        const v = (ruido.simplex2(x / escala, y / escala) + 1) / 2;
-        if (v < 0.25) linha += "~";
-        else if (v < 0.45) linha += ".";
-        else if (v < 0.65) linha += ",";
-        else if (v < 0.85) linha += "^";
-        else linha += "M";
-      }
-      resultado.push(linha);
+  const [mapa, setMapa] = useState<string[]>([]);
+
+  async function getMapa() {
+    const promise = await fetch("/api/mapa");
+    const data = await promise.json();
+
+    if (data.mapa === null) {
+      await fetch("/api/mapa", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          info: { tamx, tamy, seed, escala },
+        }),
+      });
+      const promise = await fetch("/api/mapa");
+      const data = await promise.json();
+
+      setMapa(data.mapa);
+    } else {
+      setMapa(data.mapa);
     }
-    return resultado;
-  }, [tamx, tamy, seed, escala]);
+  }
+
+  useEffect(() => {
+    getMapa();
+  }, []);
 
   const corTerreno = (char: string) => {
     switch (char) {
@@ -131,15 +141,16 @@ export default function Mapa({
         }}
         className="mapa"
       >
-        {linhas.map((linha, y) => (
-          <div key={y}>
-            {linha.split("").map((char, x) => (
-              <span key={x} style={{ color: corTerreno(char) }}>
-                {char}
-              </span>
-            ))}
-          </div>
-        ))}
+        {mapa &&
+          mapa.map((linha, y) => (
+            <div key={y}>
+              {linha.split("").map((char, x) => (
+                <span key={x} style={{ color: corTerreno(char) }}>
+                  {char}
+                </span>
+              ))}
+            </div>
+          ))}
       </div>
     </div>
   );
