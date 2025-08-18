@@ -8,7 +8,13 @@ const amarante = Amarante({
   weight: "400",
 });
 
-export default function Button({ children, href }) {
+export default function Button({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href: string;
+}) {
   return (
     <a href={href}>
       <div

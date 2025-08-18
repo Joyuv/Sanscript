@@ -18,8 +18,11 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/noisejs": "^2.1.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "9.33.0",
+    "eslint-config-next": "15.4.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
