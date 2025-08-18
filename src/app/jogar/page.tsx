@@ -1,7 +1,7 @@
 "use client";
 
 export default function Page() {
-  async function addItem(nome, quantidade = 1) {
+  async function addItem(nome: string, quantidade = 1) {
     await fetch("/api/personagem/inventario", {
       method: "POST",
       headers: {

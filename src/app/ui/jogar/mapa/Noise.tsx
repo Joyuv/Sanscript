@@ -1,4 +1,4 @@
-import { Noise } from "noisejs";
+import Noise from "noisejs";
 import { useMemo, useState, useRef } from "react";
 import "@/app/ui/jogar/mapa/mapa.css";
 
@@ -9,7 +9,17 @@ import "@/app/ui/jogar/mapa/mapa.css";
 // Floresta = x < 0.9 (^)
 // Montanha = else (M)
 
-export default function Mapa({ tamx, tamy, seed, escala }) {
+export default function Mapa({
+  tamx,
+  tamy,
+  seed,
+  escala,
+}: {
+  tamx: number;
+  tamy: number;
+  seed: number;
+  escala: number;
+}) {
   const linhas = useMemo(() => {
     const ruido = new Noise(seed);
     const resultado = [];
@@ -28,7 +38,7 @@ export default function Mapa({ tamx, tamy, seed, escala }) {
     return resultado;
   }, [tamx, tamy, seed, escala]);
 
-  const corTerreno = (char) => {
+  const corTerreno = (char: string) => {
     switch (char) {
       case "~":
         return "blue"; // água
@@ -88,7 +98,6 @@ export default function Mapa({ tamx, tamy, seed, escala }) {
 
   return (
     <div
-      style={{}}
       className="border-2 border-white"
       ref={containerRef}
       style={{

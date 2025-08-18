@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from "react";
 
+type Item = {
+  nome: string;
+  quantidade: number;
+};
+
 export default function Page() {
-  const [mochila, setMochila] = useState<any[]>([]);
+  const [mochila, setMochila] = useState<Item[]>([]);
   async function getMochila() {
     const response = await fetch("/api/personagem/inventario");
     const data = await response.json();
@@ -15,7 +20,7 @@ export default function Page() {
     getMochila();
   }, []);
 
-  async function removeItem(nome, quantidade = 1) {
+  async function removeItem(nome: string, quantidade: number = 1) {
     await fetch("/api/personagem/inventario", {
       method: "POST",
       headers: {
@@ -33,14 +38,13 @@ export default function Page() {
     <>
       <p>Página de mochila</p>
       <ul>
-        {mochila.map((item) => {
-          return (
-            <li key={item.nome}>
-              {item.nome} - {item.quantidade}
-              <button onClick={() => removeItem(item.nome)}>Remover</button>
-            </li>
-          );
-        })}
+        {mochila.map((item: Item) => (
+          <li key={item.nome}>
+            {item.nome} - {item.quantidade}
+            <button onClick={() => removeItem(item.nome)}>Remover</button>
+          </li>
+        ))}
+        ;
       </ul>
     </>
   );
