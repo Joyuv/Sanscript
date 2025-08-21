@@ -44,7 +44,6 @@ export default function Page() {
             <button onClick={() => removeItem(item.nome)}>Remover</button>
           </li>
         ))}
-        ;
       </ul>
     </>
   );
