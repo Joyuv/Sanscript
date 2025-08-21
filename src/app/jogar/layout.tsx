@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-row w-screen gap-2">
       <Navbar toggleMapa={() => toggleMapaAtivo(!mapaAtivo)} />
-      <div className="m-2">
+      <div className="m-2 w-full">
         {mapaAtivo && (
           <Mapa tamx={100} tamy={60} seed={Math.random()} escala={18} />
         )}

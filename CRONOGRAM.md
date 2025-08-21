@@ -15,9 +15,9 @@ Este documento detalha o cronograma e as metas para o desenvolvimento do jogo RP
 
 **Tarefas:**
 
-- [ ] Fazer tutorial oficial do Next.js e entender roteamento
+- [x] Fazer tutorial oficial do Next.js e entender roteamento
 - [x] Configurar Tailwind no projeto
-- [ ] Criar componente básico com tela inicial e botões
+- [x] Criar componente básico com tela inicial e botões
 - [x] Testar import alias (`@/*`)
 
 ---
@@ -32,7 +32,7 @@ Este documento detalha o cronograma e as metas para o desenvolvimento do jogo RP
 
 **Tarefas:**
 
-- [ ] Criar mapa básico gerado aleatoriamente
+- [x] Criar mapa básico gerado aleatoriamente
 - [ ] Criar componentes para áreas e descrição de locais
 - [ ] Implementar navegação entre locais
 - [ ] Salvar estado do jogo no localStorage
