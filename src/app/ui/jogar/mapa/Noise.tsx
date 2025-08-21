@@ -45,7 +45,11 @@ export default function Mapa({
   }
 
   useEffect(() => {
-    getMapa();
+    if (mapa.length !== 0) {
+      null;
+    } else {
+      getMapa();
+    }
   });
 
   const corTerreno = (char: string) => {
