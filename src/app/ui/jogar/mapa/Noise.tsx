@@ -46,7 +46,7 @@ export default function Mapa({
 
   useEffect(() => {
     getMapa();
-  }, []);
+  });
 
   const corTerreno = (char: string) => {
     switch (char) {
